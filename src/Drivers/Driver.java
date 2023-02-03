@@ -46,14 +46,11 @@ public abstract class Driver {
                 '}';
     }
 
-    void startDriving() {
-    }
+    abstract void startDriving();
 
-    void stopDriving() {
-    }
+    abstract void stopDriving();
 
-    void refuelTransport() {
-    }
+    abstract void refuelTransport();
 
 }
 
