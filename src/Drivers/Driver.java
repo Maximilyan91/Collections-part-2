@@ -39,11 +39,7 @@ public abstract class Driver {
 
     @Override
     public String toString() {
-        return "Driver{" +
-                "fullName='" + fullName + '\'' +
-                ", hasDriverLicense=" + hasDriverLicense +
-                ", experience=" + experience +
-                '}';
+        return "Водитель " + fullName;
     }
 
     abstract void startDriving();
