@@ -19,7 +19,6 @@ public class Main {
         DriverD driverD1 = new DriverD("DriverD1", true, 5);
         DriverB driverB2 = new DriverB("DriverB1", true, 1);
 
-
         Set<Driver> drivers = new HashSet<>();
         drivers.add(driverB1);
         drivers.add(driverB2);

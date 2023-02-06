@@ -38,7 +38,6 @@ public abstract class Driver {
         this.experience = experience;
     }
 
-
     @Override
     public String toString() {
         return "Водитель " + fullName;
