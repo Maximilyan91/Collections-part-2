@@ -10,14 +10,27 @@ import Transport.Car;
 import Transport.Transport;
 import Transport.Truck;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         DriverB driverB1 = new DriverB("DriverB1", true, 1);
         DriverC driverC1 = new DriverC("DriverC1", true, 3);
         DriverD driverD1 = new DriverD("DriverD1", true, 5);
+        DriverB driverB2 = new DriverB("DriverB1", true, 1);
+
+
+        Set<Driver> drivers = new HashSet<>();
+        drivers.add(driverB1);
+        drivers.add(driverB2);
+        drivers.add(driverB1);
+        drivers.add(driverC1);
+        drivers.add(driverC1);
+        drivers.add(driverD1);
+        drivers.add(driverD1);
+        drivers.add(driverD1);
+
+        System.out.println(Arrays.toString(drivers.toArray()));
 
         Car car1 = new Car("Car brand 1", "model 1", 1.0, driverB1, Car.BodyType.COUPE);
 //        Car car2 = new Car("Car brand 2", "model 2", 2.0, new DriverB("DriverB2",true, 1), Car.BodyType.SEDAN);
@@ -36,42 +49,39 @@ public class Main {
 
         DriverB driverB = new DriverB("DriverB1", false, 1);
 
-        List<Transport> allracingCars = new ArrayList<>();
+//        List<Transport> allracingCars = new ArrayList<>();
 
-        allracingCars.add(car1);
-        allracingCars.add(bus1);
-        allracingCars.add(truck1);
-
-
-        Mechanics mech1 = new Mechanics("Surname1", "Name1", "Company1", TransportType.ALL);
-        Mechanics mech2 = new Mechanics("Surname2", "Name2", "Company2", TransportType.BUS);
-        Mechanics mech3 = new Mechanics("Surname3", "Name3", "Company3",TransportType.ALL);
-
-        List<Driver> drivers = new ArrayList<>();
-        drivers.add(driverB1);
-        drivers.add(driverC1);
-        drivers.add(driverD1);
+//        allracingCars.add(car1);
+//        allracingCars.add(bus1);
+//        allracingCars.add(truck1);
+//
+//
+//        Mechanics mech1 = new Mechanics("Surname1", "Name1", "Company1", TransportType.ALL);
+//        Mechanics mech2 = new Mechanics("Surname2", "Name2", "Company2", TransportType.BUS);
+//        Mechanics mech3 = new Mechanics("Surname3", "Name3", "Company3",TransportType.ALL);
 
 
-        car1.addMechanic(mech1);
-        car1.addMechanic(mech1);
-        bus1.addMechanic(mech3);
-        truck1.addMechanic(mech2);
 
-        mech1.doService();
 
-        for (Transport<?> transport : allracingCars) {
-            System.out.println(transport + " " + transport.getModel() + " " + transport.getDriver() + transport.getMechanics());
-        }
-
-        ServiceStation serviceStation = new ServiceStation();
-        serviceStation.addTransport(car1);
-        serviceStation.addTransport(bus1);
-        serviceStation.addTransport(truck1);
-
-        serviceStation.runService();
-        serviceStation.runService();
-        serviceStation.runService();
+//        car1.addMechanic(mech1);
+//        car1.addMechanic(mech1);
+//        bus1.addMechanic(mech3);
+//        truck1.addMechanic(mech2);
+//
+//        mech1.doService();
+//
+//        for (Transport<?> transport : allracingCars) {
+//            System.out.println(transport + " " + transport.getModel() + " " + transport.getDriver() + transport.getMechanics());
+//        }
+//
+//        ServiceStation serviceStation = new ServiceStation();
+//        serviceStation.addTransport(car1);
+//        serviceStation.addTransport(bus1);
+//        serviceStation.addTransport(truck1);
+//
+//        serviceStation.runService();
+//        serviceStation.runService();
+//        serviceStation.runService();
 
 
 //        car2.getPitStop(car2);
