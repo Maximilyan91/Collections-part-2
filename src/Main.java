@@ -17,6 +17,20 @@ public class Main {
         DriverB driverB1 = new DriverB("DriverB1", true, 1);
         DriverC driverC1 = new DriverC("DriverC1", true, 3);
         DriverD driverD1 = new DriverD("DriverD1", true, 5);
+        DriverB driverB2 = new DriverB("DriverB1", true, 1);
+
+
+        Set<Driver> drivers = new HashSet<>();
+        drivers.add(driverB1);
+        drivers.add(driverB2);
+        drivers.add(driverB1);
+        drivers.add(driverC1);
+        drivers.add(driverC1);
+        drivers.add(driverD1);
+        drivers.add(driverD1);
+        drivers.add(driverD1);
+
+        System.out.println(Arrays.toString(drivers.toArray()));
 
         Car car1 = new Car("Car brand 1", "model 1", 1.0, driverB1, Car.BodyType.COUPE);
 //        Car car2 = new Car("Car brand 2", "model 2", 2.0, new DriverB("DriverB2",true, 1), Car.BodyType.SEDAN);
@@ -46,16 +60,7 @@ public class Main {
 //        Mechanics mech2 = new Mechanics("Surname2", "Name2", "Company2", TransportType.BUS);
 //        Mechanics mech3 = new Mechanics("Surname3", "Name3", "Company3",TransportType.ALL);
 
-        Set<Driver> drivers = new HashSet<>();
-        drivers.add(driverB1);
-        drivers.add(driverB1);
-        drivers.add(driverC1);
-        drivers.add(driverC1);
-        drivers.add(driverD1);
-        drivers.add(driverD1);
-        drivers.add(driverD1);
 
-        System.out.println(Arrays.toString(drivers.toArray()));
 
 
 //        car1.addMechanic(mech1);
